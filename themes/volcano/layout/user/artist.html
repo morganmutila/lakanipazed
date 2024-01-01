@@ -40,23 +40,7 @@
 					<div class="container">
 					<div class="artist_user_info">
 						<div class="ap_user_ava">
-							<div class="avatar_container">
-								<?php if ($music->userData->owner == true) {?>
-								<div class="edit_cover">
-									<form action="" method="POST" id="user-change-avatar-form">
-										<span class="btn-file" id="change-avatar-icon">
-											<span class="icon">
-												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M4,4H7L9,2H15L17,4H20A2,2 0 0,1 22,6V18A2,2 0 0,1 20,20H4A2,2 0 0,1 2,18V6A2,2 0 0,1 4,4M12,7A5,5 0 0,0 7,12A5,5 0 0,0 12,17A5,5 0 0,0 17,12A5,5 0 0,0 12,7M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9Z"></path></svg>
-											</span>
-											<input type="file" name="avatar" id="user-avatar" accept="image/x-png, image/jpeg">
-										</span>
-									</form>
-								</div>
-								<?php } ?>
-								<a href="{{USER url}}" data-load="{{USER username}}">
-									<img src="{{USER avatar}}" alt="User Avatar" id="avatar">
-								</a>
-							</div>
+							
 							<div class="info_container">
 								<h4><a href="{{USER url}}" data-load="{{USER username}}">{{USER name}}
 									<?php if ($music->userData->verified == 1) {?>
@@ -103,6 +87,23 @@
 									<!-- <button class="btn btn-outline-primary">{{LANG Play All}}</button> -->
 								</div>
 							</div>
+							<div class="avatar_container">
+								<?php if ($music->userData->owner == true) {?>
+								<div class="edit_cover">
+									<form action="" method="POST" id="user-change-avatar-form">
+										<span class="btn-file" id="change-avatar-icon">
+											<span class="icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M4,4H7L9,2H15L17,4H20A2,2 0 0,1 22,6V18A2,2 0 0,1 20,20H4A2,2 0 0,1 2,18V6A2,2 0 0,1 4,4M12,7A5,5 0 0,0 7,12A5,5 0 0,0 12,17A5,5 0 0,0 17,12A5,5 0 0,0 12,7M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9Z"></path></svg>
+											</span>
+											<input type="file" name="avatar" id="user-avatar" accept="image/x-png, image/jpeg">
+										</span>
+									</form>
+								</div>
+								<?php } ?>
+								<a href="{{USER url}}" data-load="{{USER username}}">
+									<img src="{{USER avatar}}" alt="User Avatar" id="avatar">
+								</a>
+							</div>
 						</div>
 					</div>
 					</div>
@@ -110,7 +111,7 @@
 				
 				<div class="container p_rel_cont">
 					<div class="row">
-						<div class="col-xl-12">
+						<div class="col-xl-12 mb-4" style="border-bottom: 1px solid #313131">
 							<div class="mus_artst_pg_link">
 								<ul class="list-unstyled">
 									<li><a class="nav-link <?php echo (empty($music->third_url) || $music->third_url == 'activities') ? 'active' : ''?>" href="{{LINK {{USER username}}}}/activities" data-load="{{USER username}}/activities">{{LANG Activities}}</a></li>
