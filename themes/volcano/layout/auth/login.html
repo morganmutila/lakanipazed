@@ -1,7 +1,7 @@
 <!-- Modal -->
 <div class="modal fade auth_box_prnt" id="login_box" tabindex="-1" role="dialog" aria-labelledby="login_box" aria-hidden="true">
 	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg></button>
-	<div class="modal-dialog auth_box" role="document">
+	<div class="modal-dialog auth_box w-0" role="document">
 		<div class="modal-content">
 			<div class="right_combo">
 				<div class="navbar-brand">
@@ -12,12 +12,12 @@
 					<?php } ?>
 				</div>
 				<h2>{{LANG Login}}</h2>
-				<p>{{LANG Get access to your Music, Playlists and Account}}</p>
+				<p>{{LANG Get access to your Music and Account}}</p>
 				
 				<div class="alert alert-danger alert-empty" id="output-errors"></div>
 				<form method="post" action="" method="POST" id="login-form">
 					<div class="form-group mat_input">
-						<input type="text" class="form-control" placeholder="{{LANG Username}}" autofocus name="username">
+						<input type="text" class="form-control" placeholder="{{LANG Username or Email}}" autofocus name="username">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path fill="currentColor" d="M4 22a8 8 0 1 1 16 0h-2a6 6 0 1 0-12 0H4zm8-9c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm0-2c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z"/></svg>
 					</div>
 					<div class="form-group mat_input">
@@ -100,9 +100,6 @@
 						<div id="buttonDiv"></div>
 					<?php } ?>
 				</div>
-			</div>
-			<div class="left_combo" style="background-image: url({{CONFIG theme_url}}/img/auth/singing.jpg);">
-				<h2>{{LANG live_your_day_music}} <span>{{LANG welcome_music}}</span> <img src="{{theme_url}}/img/icon.png" /></h2>
 			</div>
 		</div>
 	</div>

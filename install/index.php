@@ -81,15 +81,15 @@ if (!empty($_POST['install'])) {
              $ServerErrors[] = "The sql-mode <b>ONLY_FULL_GROUP_BY</b> is enabled in your mysql server, please contact your host provider to disable it.";
            }
         }
-        $sql = mysqli_query($con, "show variables where Variable_name='wait_timeout';");
-        $sql_sql = mysqli_fetch_assoc($sql);
-        if (count($sql_sql) > 0) {
-            if (!empty($sql_sql['Value'])) {
-                if ($sql_sql['Value'] < 1000) {
-                  $ServerErrors[] = "The MySQL variable <b>wait_timeout</b> is {$sql_sql['Value']}, minumum required is 1000, please contact your host provider to update it.";
-                }
-            }
-        }
+        // $sql = mysqli_query($con, "show variables where Variable_name='wait_timeout';");
+        // $sql_sql = mysqli_fetch_assoc($sql);
+        // if (count($sql_sql) > 0) {
+        //     if (!empty($sql_sql['Value'])) {
+        //         if ($sql_sql['Value'] < 1000) {
+        //           $ServerErrors[] = "The MySQL variable <b>wait_timeout</b> is {$sql_sql['Value']}, minumum required is 1000, please contact your host provider to update it.";
+        //         }
+        //     }
+        // }
     }
     if (!filter_var($_POST['site_url'], FILTER_VALIDATE_URL)) {
         $ServerErrors[] = "Invalid site url";
