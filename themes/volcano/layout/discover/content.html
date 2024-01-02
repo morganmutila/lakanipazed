@@ -14,22 +14,25 @@
 				{{TOP_SLIDER_CONTENT}}
 			</div>
 			<!-- End Top Slider -->
-			
-			<!-- Recently Played (Only Visible if User Plays any Music) -->
-				<div class="mb-60">
-					<h2 class="home_widget_title home_big_title">
-						{{LANG Recently Played}}
-						<div class="slide_btns">
-							<?php if (IS_LOGGED) { ?>
-							<a href="{{LINK recently_played}}" data-load="recently_played">{{LANG Show All}}</a>
-							<?php } ?>
-							<div class="recent_music_btn"></div>
-						</div>
-					</h2>
-					<div class="rp_slider">{{RECENT_PLAYS}}</div>
-				</div>
-			<!-- End Recently Played -->
-					
+
+			<?php if(IS_LOGGED ) { ?>
+				<!-- Recently Played (Only Visible if User Plays any Music) -->
+					<div class="mb-60">
+						<h2 class="home_widget_title home_big_title">
+							{{LANG Recently Played}}
+							<div class="slide_btns">
+								<?php if (IS_LOGGED) { ?>
+								<a href="{{LINK recently_played}}" data-load="recently_played">{{LANG Show All}}</a>
+								<?php } ?>
+								<div class="recent_music_btn"></div>
+							</div>
+						</h2>
+						<div class="rp_slider">{{RECENT_PLAYS}}</div>
+					</div>
+				<!-- End Recently Played -->
+
+			<?php } ?>	
+
 			<div class="row">
 				<?php if (!empty($music->playlists)) { ?>
 				<div class="col-md-7">
