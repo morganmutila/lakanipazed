@@ -8,22 +8,16 @@
 			<?php }	?>
 	  
 			<div class="ds_point_sys">
-				<img src="{{CONFIG theme_url}}/img/points/banner.png" class="banner">
-				<img src="{{CONFIG theme_url}}/img/points/coins.png" class="coins">
-				<div>
-					<img src="{{CONFIG theme_url}}/img/points/coin.png">
+				<img src="{{CONFIG theme_url}}/img/points.png">
+				<h2>{{LANG Point System}}<span style="font-size: 14px; color: var(--main-color)">(1 {{LANG point}} = {{CONFIG point_system_points_to_dollar}} {{CONFIG currency}})</span></h2>
+				<div class="ds_point_sys_innr">
+					<b><?php echo GetPointEarned();?></b>
+					<div>
+						<div>{{LANG points}}</div>
+					</div>
 				</div>
-				<div>
-					<h2>{{LANG Point System}}<span>(1 {{LANG point}} = {{CONFIG point_system_points_to_dollar}} {{CONFIG currency}})</span></h2>
-					<div class="ds_point_sys_innr">
-						<b><?php echo GetPointEarned();?></b>
-						<div>
-							<div>{{LANG points}}</div>
-						</div>
-					</div>
-					<div class="ds_point_sys_innr wallet">
-						<b>= {{CONFIG currency_symbol}}<?php echo GetWalletReworded();?></b>
-					</div>
+				<div class="ds_point_sys_innr wallet">
+					<b>{{CONFIG currency_symbol}}<?php echo GetWalletReworded();?></b>
 				</div>
 			</div>
       
