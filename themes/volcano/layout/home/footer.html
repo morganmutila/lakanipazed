@@ -1,9 +1,4 @@
-<div class="ma_footer_cright">
-	<div class="ma_footer_links">
-		<div class="lang_select dropup">
-			<button type="button" class="btn dropdown-toggle" data-toggle="modal" data-target="#select-language"><svg xmlns="http://www.w3.org/2000/svg" width="16.66" height="16.66" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg> <?php echo ucfirst($_SESSION['lang']); ?></button>
-		</div>
-	</div>
+<div class="ma_footer_cright d-flex align-items-start">
 	<div class="ma_footer_links">
 		<?php if (IS_LOGGED && $music->config->developers_page == 'on') { ?>
 		<a href="{{LINK developers}}" data-load="developers">{{LANG developers}}</a>&nbsp;&nbsp;•&nbsp;&nbsp;
@@ -22,7 +17,7 @@
 		<?php if ($music->privacy_policy_page == 1) { ?>
 		<a href="{{LINK terms/privacy}}" data-load="terms/privacy">{{LANG Privacy Policy}}</a>&nbsp;&nbsp;•&nbsp;&nbsp;
 		<?php } ?>
-		<a href="{{LINK terms/faqs}}" data-load="terms/faqs">{{LANG faqs}}</a>
+		<a href="{{LINK terms/faqs}}" data-load="terms/faqs">{{LANG FAQs}}</a>
 		{{HOOK LOAD_FOOTER_CONTENT}}
 
 		<?php $pages = GetCustomPages();
@@ -39,8 +34,12 @@
 				</div>
 			</div>
 		<?php } ?>
+		
+		<div><a href="//www.dmca.com/Protection/Status.aspx?ID=45030f0e-0bc5-4811-bdbf-0cd23f5623b9" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/dmca-badge-w150-2x1-02.png?ID=45030f0e-0bc5-4811-bdbf-0cd23f5623b9"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+		</div>
 	</div>
 	<div class="ma_footer_links">
+		
 		<?php if (!empty($music->config->facebook_url)) { ?>
 			<a href="<?php echo($music->config->facebook_url); ?>" target="_blank" class="bold">
 				<svg height="512" viewBox="0 0 152 152" width="512" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><g><g><path d="m76 0a76 76 0 1 0 76 76 76 76 0 0 0 -76-76zm19.26 68.8-1.26 10.59a2 2 0 0 1 -2 1.78h-11v31.4a1.42 1.42 0 0 1 -1.4 1.43h-11.2a1.42 1.42 0 0 1 -1.4-1.44l.06-31.39h-8.33a2 2 0 0 1 -2-2v-10.58a2 2 0 0 1 2-2h8.27v-10.26c0-11.87 7.07-18.33 17.4-18.33h8.47a2 2 0 0 1 2 2v8.91a2 2 0 0 1 -2 2h-5.19c-5.62.09-6.68 2.78-6.68 6.8v8.85h12.32a2 2 0 0 1 1.94 2.24z"/></g></g></svg>&nbsp;

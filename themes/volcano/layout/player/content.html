@@ -1,6 +1,6 @@
 <div class="ma_player <?php if (empty($_SESSION['songs'])) { ?>closed<?php } ?>">
 	<div class="player">
-		<div class="player-video-preview" id="my_video_player_container">
+		<!-- <div class="player-video-preview" id="my_video_player_container">
 			<div class="y_player_cover"></div>
 			<div class="plyr__video-embed" id="my_video_player_">
 			  <iframe
@@ -10,15 +10,16 @@
 			    allow="autoplay"
 			  ></iframe>
 			</div>
-		</div>
+		</div> -->
+
 		<div class="song_details">
 			<div class="song_details_inner player-song-url" data-load="">
 				<div class="song_art">
-					<a href="#" class="player-song-url" data-load=""><img amplitude-song-info="cover_art_url" amplitude-main-song-info="true"/></a>
+					<a href="" class="player-song-url" data-load=""><img amplitude-song-info="cover_art_url" amplitude-main-song-info="true"/></a>
 				</div>
 				<div class="song_title">
 					<div class="d-flex flex-column">
-						<a href="#" class="player-song-url mt-2" data-load="">
+						<a href="" class="player-song-url mt-2" data-load="">
 							<h3 amplitude-song-info="name" amplitude-main-song-info="true" class="song_name font-weight-normal"></h3>
 						</a>
 						<h6 amplitude-song-info="artist" amplitude-main-song-info="true" class="song_artist text-muted font-weight-normal"></h6>
@@ -39,16 +40,14 @@
 		</div>
 
 		<div class="song_progress">
-			<div class="song_time">
-				
+			<div class="song_time">				
 				<div class="song_prog_mobi">
 					<div class="progress_container">
 						<input type="range" class="amplitude-song-slider" amplitude-main-song-slider="true"/>
 						<progress id="song-played-progress" class="amplitude-song-played-progress" amplitude-main-song-played-progress="true"></progress>
 						<progress id="song-buffered-progress" class="amplitude-buffered-progress" value="0"></progress>
 					</div>
-				</div>
-				
+				</div>				
 			</div>
 			<div class="song_controls">		
 				<div class="amplitude-shuffle amplitude-shuffle-off" id="shuffle" title="{{LANG Shuffle}}">
@@ -93,8 +92,9 @@
 			<div class="song_rs_controls">				
 				<div class="repeat_container d-flex align-items-center">		
 					<div class="song_fav" title="Favorite" id="song-fav-button"></div>
-			
-					<!-- <div class="amplitude-playback-speed amplitude-playback-speed-10"></div> -->
+					
+					<button class="ss_action_item" onclick="alert($('#current-track').val(), $(this));"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M13.12 17.023l-4.199-2.29a4 4 0 1 1 0-5.465l4.2-2.29a4 4 0 1 1 .959 1.755l-4.2 2.29a4.008 4.008 0 0 1 0 1.954l4.199 2.29a4 4 0 1 1-.959 1.755zM6 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm11-6a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" /></svg> {{LANG Share}}</button>
+
 				</div>
 	
 			</div>

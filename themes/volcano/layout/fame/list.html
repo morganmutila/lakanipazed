@@ -15,7 +15,7 @@
 				<div class="track_info">
 					<a href="{{LINK }}{{ARTIST username}}" data-load="{{ARTIST username}}">{{ARTIST name}}</a>
 				</div>
-				<div class="artist">@{{ARTIST username}}&nbsp;&nbsp;•&nbsp;&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="7.242" height="9.438" viewBox="0 0 7.242 9.438"> <path id="Path_215785" data-name="Path 215785" d="M8848.7,2869.4c-.077,0-.153-.127-.19-.127a1.7,1.7,0,0,1-.077-.256v-8.417a1.712,1.712,0,0,1,.077-.256c.037,0,.113-.127.19-.127s.18-.129.269-.129a.26.26,0,0,0,.254.129l6.225,4.21c.076,0,.127.125.165.125a.637.637,0,0,1,.063.256.653.653,0,0,1-.062.256c-.038,0-.089.127-.165.127l-6.225,4.208a.262.262,0,0,0-.254.127C8848.88,2869.531,8848.789,2869.4,8848.7,2869.4Z" transform="translate(-8848.433 -2860.094)" fill="currentColor"/> </svg> {{VIEWS_FORMAT}}</div>
+				<div class="artist">@{{ARTIST username}}</div>
 			</div>
 		</div>
 		<hr>
@@ -24,10 +24,15 @@
 				<p class="stat"><b>{{COUNT_FOLLOWERS}}</b> {{LANG followers}}</p>
 			</div>
 			<div class="col-md-4">
-				<p class="stat"><b>{{COUNT_FOLLOWING}}</b> {{LANG following}}</p>
+				<p class="stat"><b>{{COUNT_TRACKS}}</b> {{LANG tracks}}</p>
 			</div>
 			<div class="col-md-4">
-				<p class="stat"><b>{{COUNT_TRACKS}}</b> {{LANG tracks}}</p>
+				<div class="stat">
+					<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" height="15" x="0" y="0" viewBox="0 0 469.333 469.333" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+						<g><path d="M234.667 0C105.271 0 0 114.844 0 256v117.333C0 379.224 4.776 384 10.667 384h32v42.667c0 23.531 19.135 42.667 42.667 42.667h32a10.66 10.66 0 0 0 10.667-10.667v-192A10.66 10.66 0 0 0 117.334 256h-32c-23.531 0-42.667 19.135-42.667 42.667V256c0-117.635 86.135-213.333 192-213.333s192 95.698 192 213.333v42.667C426.667 275.135 407.531 256 384 256h-32a10.66 10.66 0 0 0-10.667 10.667v192A10.66 10.66 0 0 0 352 469.334h32c23.531 0 42.667-19.135 42.667-42.667V384h32c5.891 0 10.667-4.776 10.667-10.667V256C469.333 114.844 364.063 0 234.667 0z" fill="currentColor" opacity="1" data-original="#000000" class=""></path></g>
+					</svg>
+					<b class="ml-1">{{VIEWS_FORMAT}}</b>
+				</div>			
 			</div>
 		</div>
 	</div>

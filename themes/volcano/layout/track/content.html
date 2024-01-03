@@ -1,24 +1,24 @@
 <?php if( $music->songData->src == 'radio' && $music->stream_exist === false ) {?>
-<div class="modal fade" id="stream_not_found" role="dialog" aria-labelledby="stream_not_found" aria-hidden="true" data-id="0">
-	<div class="modal-dialog mat_box" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title">{{LANG Warning}}</h5>
-			</div>
-			<div class="modal-body">
-				{{LANG Stream url not found.}}
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">{{LANG Close}}</button>
+	<div class="modal fade" id="stream_not_found" role="dialog" aria-labelledby="stream_not_found" aria-hidden="true" data-id="0">
+		<div class="modal-dialog mat_box" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">{{LANG Warning}}</h5>
+				</div>
+				<div class="modal-body">
+					{{LANG Stream url not found.}}
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">{{LANG Close}}</button>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<script>
-	jQuery(document).ready(function($) {
-		$('#stream_not_found').modal('show');
-	});
-</script>
+	<script>
+		jQuery(document).ready(function($) {
+			$('#stream_not_found').modal('show');
+		});
+	</script>
 <?php }?>
 <div class="ma_page_content">
 	<div class="ma_pc_inner">
@@ -439,7 +439,7 @@
 								<?php if (IS_LOGGED) { ?>
 								<img src="{{ME avatar}}" alt="" class="u_avatar">
 								<?php } else {?>
-								<img src="<?php echo getMedia($music->user_default_avatar)?>" alt="" class="u_avatar">
+								<img src="<?php echo getMedia($music->user_default_avatar)?>" alt="profile pic" class="u_avatar">
 								<?php } ?>
 								<!--<input type="text" onkeyup="registerComment(this.value, $('#current-track').val(), event, $(this));" title="{{LANG Write a comment and press enter}}" placeholder="{{LANG Write a comment and press enter}}" value="" class="comment_input" >-->
 								<textarea title="{{LANG Write a comment and press enter}}" data-audio-id="{{t_audio_id}}" placeholder="{{LANG Write a comment and press enter}}" value="" class="comment_input" ></textarea>
