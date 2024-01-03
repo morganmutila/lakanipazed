@@ -333,7 +333,7 @@ if ( $music->config->maintenance_mode == 'on' ) {
 
     }
 
-    if( $maintenance_mode === true ){
+    if( $maintenance_mode == true ){
         $file_location = "./sources/maintenance.php";
         if (file_exists($file_location)) {
             require_once $file_location;
